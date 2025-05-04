@@ -14,7 +14,7 @@ export const holidayTypeIcons = {
         icon: <BankIcon color="secondary" />,
         label: "Bancário",
       },
-      sSchool: {
+      School: {
         icon: <SchoolIcon color="error" />,
         label: "Escolar",
       },

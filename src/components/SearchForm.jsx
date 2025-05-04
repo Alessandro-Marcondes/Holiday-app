@@ -47,7 +47,7 @@ export default function SearchForm() {
         try {
 
             if (year < 1975 || year > 2075) {
-                dispatch({type:"FETCH_ERROR", payload:" Insira uma data entre 1975 e 2075"});
+                dispatch({ type: "FETCH_ERROR", payload: " Insira uma data entre 1975 e 2075" });
                 return;
             }
 
@@ -62,6 +62,9 @@ export default function SearchForm() {
             const data = await res.json();
             dispatch({ type: "FETCH_SUCCESS", payload: data });
 
+
+            console.log("Adicionando ao historico:", {year, country});
+            dispatch({ type: "ADD_HISTORY", payload: { year, country } });
 
 
         }
