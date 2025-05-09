@@ -1,71 +1,90 @@
-# Getting Started with Create React App
+# Holiday App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O **Holiday App** é uma aplicação construída com **React.js** que permite pesquisar feriados públicos em diferentes países, com filtros de ano e país. Ela utiliza a API pública [Date Nager](https://date.nager.at/) para obter os dados de feriados.
 
-## Available Scripts
+## Tecnologias Utilizadas
 
-In the project directory, you can run:
+- **React.js**: Biblioteca JavaScript para construir a interface de usuário.
+- **Material-UI**: Biblioteca de componentes de interface para React.
+- **Styled-components**: Biblioteca para estilização de componentes.
+- **Day.js**: Biblioteca para manipulação de datas.
+- **Axios** (ou qualquer outra solução que você esteja usando para consumir a API, se aplicável).
+
+## Funcionalidades
+
+- Visualização de feriados a partir de uma lista.
+- Filtros de pesquisa:
+  - Filtro por **mês** (número de 1 a 12).
+  - Filtro por **tipo de feriado** (como Público, Bancário, Escolar, Opcional).
+- Exibição de uma lista de feriados com base nos filtros selecionados.
+
+## Pré-requisitos
+
+Antes de começar, verifique se você tem o **Node.js** e **npm** instalados. Você pode baixar e instalar o Node.js [aqui](https://nodejs.org/).
+
+## Instruções de Instalação
+
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/Alessandro-Marcondes/Holiday-app
+   cd holiday-app
+   ```
+
+2. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+
+3. Inicie o servidor de desenvolvimento:
+
+   ```bash
+   npm start
+   ```
+
+   Isso irá iniciar a aplicação em `http://localhost:3000` no seu navegador.
+
+
+## APIs Utilizada
+
+### [Date Nager API](https://date.nager.at/)
+### [Flags API](https://flagcdn.com) 
+
+Este aplicativo utiliza a API **Date Nager** para buscar feriados públicos de diversos países, como também utiliza a API **Flags API** para exibir as bandeiras dos países. A aplicação permite:
+
+1. Selecionar o **país** com sua respectiva **bandeira**.
+2. Escolher o **ano** para o qual os feriados serão consultados.
+3. A API retorna os feriados públicos para o país e ano selecionados.
+
+
+### Endpoints da API:
+
+
+- **Feriados Públicos:**
+
+   Endpoint: `https://date.nager.at/api/v3/PublicHolidays/{ano}/{país}`  
+   Substitua `{ano}` pelo ano e `{país}` pelo código do país (exemplo: `BR` para Brasil).
+
+-   **Bandeira dos países:**
+
+    A API **Flags API** retorna bandeiras dos países que são carregadas dinamicamente utilizando o padrão de URL:  
+    `https://flagcdn.com/w40/{countryCode}.png`
+
+## Scripts Disponíveis
+
+No diretório do projeto, você pode executar:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Roda o aplicativo no modo de desenvolvimento.  
+Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo no navegador.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+A página será recarregada sempre que você fizer alterações.  
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Cria o aplicativo para produção na pasta `build`.  
+Isso corretamente empacota o React no modo de produção e otimiza o build para o melhor desempenho.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Holiday-app
