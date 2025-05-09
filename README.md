@@ -8,7 +8,6 @@ O **Holiday App** é uma aplicação construída com **React.js** que permite pe
 - **Material-UI**: Biblioteca de componentes de interface para React.
 - **Styled-components**: Biblioteca para estilização de componentes.
 - **Day.js**: Biblioteca para manipulação de datas.
-- **Axios** (ou qualquer outra solução que você esteja usando para consumir a API, se aplicável).
 
 ## Funcionalidades
 
